@@ -1,0 +1,11 @@
+<div class="item">
+<div class="pack pack_video_card ">
+<div class="pic">
+<a class="inner" target="new" title="爆笑恶搞！让你别把枪乱扔嘛！ @Youtube搞笑视频k" href="http://www.tudou.com/programs/view/DyXZzB8benQ/">helo
+<img class="pack_clipImg" width="120" height="90" alt="爆笑恶搞！让你别把枪乱扔嘛！ @Youtube搞笑视频k" src=" http://i3.tdimg.com/122/427/346/p.jpg ">
+</a>
+</div>
+<div class="txt">
+</div>
+</div>
+

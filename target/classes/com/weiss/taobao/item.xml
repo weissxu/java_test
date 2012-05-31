@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<item_get_response>
+	<item>
+		<approve_status>onsale</approve_status>
+		<auction_point>1</auction_point>
+		<cid>110507</cid>
+		<delist_time>2012-06-03 22:10:32</delist_time>
+		<detail_url>http://item.taobao.com/item.htm?id=3628453243&spm=2014.12129701.0.0</detail_url>
+		<ems_fee>0.00</ems_fee>
+		<express_fee>0.00</express_fee>
+		<freight_payer>seller</freight_payer>
+		<has_discount>false</has_discount>
+		<has_invoice>true</has_invoice>
+		<has_showcase>true</has_showcase>
+		<has_warranty>true</has_warranty>
+		<input_pids></input_pids>
+		<input_str></input_str>
+		<is_virtual>false</is_virtual>
+		<item_imgs list="true">
+			<item_img>
+				<id>0</id>
+				<position>0</position>
+				<url>http://img04.taobaocdn.com/bao/uploaded/i4/T1_.WGXbtuXXcaWFw__104909.jpg</url>
+			</item_img>
+			<item_img>
+				<id>119968274</id>
+				<position>1</position>
+				<url>http://img03.taobaocdn.com/bao/uploaded/i3/126583143/T2wrygXapaXXXXXXXX_!!126583143.jpg</url>
+			</item_img>
+			<item_img>
+				<id>119968275</id>
+				<position>2</position>
+				<url>http://img02.taobaocdn.com/bao/uploaded/i2/126583143/T2hvGcXgFXXXXXXXXX_!!126583143.jpg</url>
+			</item_img>
+			<item_img>
+				<id>119968276</id>
+				<position>3</position>
+				<url>http://img03.taobaocdn.com/bao/uploaded/i3/126583143/T2frGgXodXXXXXXXXX_!!126583143.jpg</url>
+			</item_img>
+		</item_imgs>
+		<list_time>2012-05-27 22:10:32</list_time>
+		<location>
+			<city>上海</city>
+			<state>上海</state>
+		</location>
+		<modified>2012-05-29 16:31:08</modified>
+		<nick>西部数据赞奇专卖店</nick>
+		<num>20553</num>
+		<num_iid>3628453243</num_iid>
+		<outer_id>38998</outer_id>
+		<pic_url>http://img04.taobaocdn.com/bao/uploaded/i4/T1_.WGXbtuXXcaWFw__104909.jpg</pic_url>
+		<post_fee>0.00</post_fee>
+		<postage_id>0</postage_id>
+		<price>715.00</price>
+		<property_alias>1627207:3232483:USB3.0 赠龙年包+硅胶套;1627207:3232484:USB2.0 赠龙年包+硅胶套</property_alias>
+		<props>20000:21944;33744:68907022;1627207:3232483;1627207:3232484;20198:118104;33389:32998;20879:21456;20199:22089;20635:29635
+		</props>
+		<seller_cids>,213585884,356795684,356940777,356805859,</seller_cids>
+		<skus list="true">
+			<sku>
+				<created>2012-04-29 22:08:03</created>
+				<modified>2012-05-29 16:31:08</modified>
+				<outer_id>USB3.0 高速接口</outer_id>
+				<price>746.80</price>
+				<properties>1627207:3232483</properties>
+				<properties_name>1627207:3232483:颜色分类:军绿色</properties_name>
+				<quantity>10447</quantity>
+				<sku_id>19600613706</sku_id>
+			</sku>
+			<sku>
+				<created>2012-04-29 22:08:03</created>
+				<modified>2012-05-29 15:44:16</modified>
+				<outer_id>USB2.0 标准接口</outer_id>
+				<price>715.00</price>
+				<properties>1627207:3232484</properties>
+				<properties_name>1627207:3232484:颜色分类:天蓝色</properties_name>
+				<quantity>10106</quantity>
+				<sku_id>19600613707</sku_id>
+			</sku>
+		</skus>
+		<stuff_status>new</stuff_status>
+		<title>数码红五月 WD/西部数据 Elements元素 1TB 2.5寸 1T 移动硬盘</title>
+		<type>fixed</type>
+		<valid_thru>7</valid_thru>
+	</item>
+</item_get_response><!--top030181.cm4 -->

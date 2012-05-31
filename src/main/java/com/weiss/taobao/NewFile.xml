@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<item_get_response>
+	<item>
+		<approve_status>onsale</approve_status>
+		<auction_point>5</auction_point>
+		<cid>3035</cid>
+		<delist_time>2012-05-29 09:33:47</delist_time>
+		<detail_url>http://item.taobao.com/item.htm?id=16427684009&amp;spm=2014.12663096.0.0</detail_url>
+		<ems_fee>0.00</ems_fee>
+		<express_fee>10.00</express_fee>
+		<freight_payer>buyer</freight_payer>
+		<has_discount>false</has_discount>
+		<has_invoice>true</has_invoice>
+		<has_showcase>true</has_showcase>
+		<has_warranty>false</has_warranty>
+		<input_pids>20000,1632501</input_pids>
+		<input_str>GXG.1978,11622087</input_str>
+		<is_virtual>false</is_virtual>
+		<item_imgs list="true">
+			<item_img>
+				<id>0</id>
+				<position>0</position>
+				<url>http://img01.taobaocdn.com/bao/uploaded/i1/T1PHCQXfReXXb7N17Z_032208.jpg</url>
+			</item_img>
+			<item_img>
+				<id>3760115610</id>
+				<position>1</position>
+				<url>http://img02.taobaocdn.com/bao/uploaded/i2/454712217/T2vm1kXnRXXXXXXXXX_!!454712217.jpg</url>
+			</item_img>
+		</item_imgs>
+		<list_time>2012-05-22 09:33:47</list_time>
+		<location>
+			<city>宁波</city>
+			<state>浙江</state>
+		</location>
+		<modified>2012-05-28 16:28:42</modified>
+		<nick>gxg1978旗舰店</nick>
+		<num>90</num>
+		<num_iid>16427684009</num_iid>
+		<outer_id>11622087</outer_id>
+		<pic_url>http://img01.taobaocdn.com/bao/uploaded/i1/T1PHCQXfReXXb7N17Z_032208.jpg</pic_url>
+		<post_fee>10.00</post_fee>
+		<postage_id>4597331</postage_id>
+		<price>428.00</price>
+		<prop_imgs list="true">
+			<prop_img>
+				<id>3397574227</id>
+				<position>0</position>
+				<properties>1627207:28332</properties>
+				<url>http://img03.taobaocdn.com/bao/uploaded/i3/454712217/T2Em1kXnBXXXXXXXXX_!!454712217.jpg</url>
+			</prop_img>
+		</prop_imgs>
+		<property_alias>20506:3217382:M/170;20506:3217383:L/175;20506:3217384:XL/180;20506:3217381:S/165;1627207:28332:002/灰色</property_alias>
+		<props>1627741:3267173;1632501:99175277;1627740:3267162;1627782:3267970;1627207:28332;20506:3217381;20506:3217382;20506:3217383;20506:3217384;1627766:3503834;1627773:130568;1627776:102510;1627780:3267959;20000:66952700</props>
+		<seller_cids>,381656149,252037227,298040129,</seller_cids>
+		<skus list="true">
+			<sku>
+				<created>2012-03-27 09:33:47</created>
+				<modified>2012-05-28 16:28:41</modified>
+				<outer_id>1162208700229</outer_id>
+				<price>428.00</price>
+				<properties>1627207:28332;20506:3217382</properties>
+				<properties_name>1627207:28332:颜色:浅灰色;20506:3217382:尺码:29（2.23尺）</properties_name>
+				<quantity>64</quantity>
+				<sku_id>18819814610</sku_id>
+			</sku>
+			<sku>
+				<created>2012-03-27 09:33:47</created>
+				<modified>2012-05-27 23:43:23</modified>
+				<outer_id>1162208700230</outer_id>
+				<price>428.00</price>
+				<properties>1627207:28332;20506:3217383</properties>
+				<properties_name>1627207:28332:颜色:浅灰色;20506:3217383:尺码:30（2.31尺）</properties_name>
+				<quantity>5</quantity>
+				<sku_id>18819814611</sku_id>
+			</sku>
+			<sku>
+				<created>2012-03-27 09:33:47</created>
+				<modified>2012-05-28 15:04:13</modified>
+				<outer_id>1162208700228</outer_id>
+				<price>428.00</price>
+				<properties>1627207:28332;20506:3217381</properties>
+				<properties_name>1627207:28332:颜色:浅灰色;20506:3217381:尺码:28（2.16尺）</properties_name>
+				<quantity>21</quantity>
+				<sku_id>18819814612</sku_id>
+			</sku>
+			<sku>
+				<created>2012-03-27 09:33:47</created>
+				<modified>2012-05-25 14:15:12</modified>
+				<outer_id>1162208700231</outer_id>
+				<price>428.00</price>
+				<properties>1627207:28332;20506:3217384</properties>
+				<properties_name>1627207:28332:颜色:浅灰色;20506:3217384:尺码:31（2.39尺）</properties_name>
+				<quantity>0</quantity>
+				<sku_id>18819814613</sku_id>
+			</sku>
+		</skus>
+		<stuff_status>new</stuff_status>
+		<title>【五折】gxg1978正品 男士时尚可翻折休闲七分裤#11622087</title>
+		<type>fixed</type>
+		<valid_thru>7</valid_thru>
+	</item>
+</item_get_response><!--top030179.cm4 -->

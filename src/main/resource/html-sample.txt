@@ -1,0 +1,50 @@
+<body>
+  <button id="login-container" class="custom-appearance" hidden>
+    <div id="login-status-header-container" class="login-status-row">
+      <div id="login-status-header"></div>
+    </div>
+    <div id="login-status-sub-header"></div>
+  </button>
+
+  <div id="notification-container" class="inactive" hidden>
+    <div id="notification">
+      <span></span>
+      <div id="notificationLinks"></div>
+      <button class="close-button custom-appearance" class="custom-appearance">
+      </button>
+    </div>
+  </div>
+
+  <div id="card-slider-frame">
+    <button id="page-switcher-start" class="page-switcher custom-appearance"
+        tabindex="2" hidden>‹
+    </button>
+    <div id="page-list"></div>
+    <button id="page-switcher-end" class="page-switcher custom-appearance"
+        tabindex="2" hidden>›
+    </button>
+    <div id="attribution">
+      <span i18n-content="attributionintro"></span>
+      <img id="attribution-img">
+    </div>
+  </div>
+
+  <div id="footer">
+    <div id="footer-border"></div>
+    <div id="footer-content">
+      <img id="logo-img">
+
+      <ul id="dot-list">
+      </ul>
+
+      <button id="recently-closed-menu-button" class="custom-appearance">
+        <span i18n-content="recentlyclosed"></span>
+        <div class="disclosure-triangle"></div>
+      </button>
+
+      <div id="trash">
+        <span i18n-content="appuninstall"></span>
+      </div>
+    </div>
+  </div>
+</body>

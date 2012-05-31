@@ -1,0 +1,10 @@
+GET / HTTP/1.1
+Host: plaza.weibo.com
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-us,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+Cookie: USRHAJAWB=usrmdins13137; _s_tentry=-; UOR=,weibo.com,; Apache=8763661552706.022.1333010119590; SINAGLOBAL=8763661552706.022.1333010119590; ULV=1333010119760:1:1:1:8763661552706.022.1333010119590:; SUS=SID-2683917293-1333011539-XD-t3jx9-ab4f9bc378d79ba435b80265fceda744; SUE=es%3D625680e06e5835ecb6843de0067339fe%26ev%3Dv1%26es2%3D837cdf987021c010717acad2b1b7920f%26rs0%3DghTXT0U8dYoCcBnQ0vGrSv5XY2a9kdGanF6N4%252BBX%252BEh77jFCrgl2KCXEsKNCBmC0cg9U6He9MyBnTUBOrW8J1lFUOBwPpnAu%252B9LH2TYXGf3Y393cz%252ByytepPyJkhdFrXpFduMTGdm3dsqO%252FKz2XZEDxC8fHHyKYzOih6ezqhTN4%253D%26rv%3D0; SUP=cv%3D1%26bt%3D1333011539%26et%3D1333097939%26d%3Dc909%26i%3D1ff1%26us%3D1%26vf%3D0%26vt%3D0%26ac%3D2%26uid%3D2683917293%26user%3Dxusiwei%2540mitao.cn%26ag%3D4%26name%3Dxusiwei%2540mitao.cn%26nick%3Dweissxu%26fmp%3D%26lcp%3D; ALF=1333616339; SSOLoginState=1333011539; wvr=3.6; un=xusiwei@mitao.cn
+
+
+

@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/home/svn/myproject/!svn/ver/2/test/.settings
+END
+org.eclipse.jdt.core.prefs
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/home/svn/myproject/!svn/ver/2/test/.settings/org.eclipse.jdt.core.prefs
+END
+org.maven.ide.eclipse.prefs
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/home/svn/myproject/!svn/ver/2/test/.settings/org.maven.ide.eclipse.prefs
+END
