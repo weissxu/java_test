@@ -20,7 +20,7 @@ public class CalendarTest {
 		System.out.println("day = " + dd);
 		System.out.println("hour = " + hh);
 
-		// 1. System.currentTimeMillis() 获取系统时间的代码
+//		 1. System.currentTimeMillis() 获取系统时间的代码
 		Timestamp ts = new Timestamp(System.currentTimeMillis());
 		String dateStr1 = ts.toString();
 		System.out.println("System.currentTimeMillis() = " + dateStr1);

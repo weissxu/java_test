@@ -13,4 +13,9 @@ public class ArrayTest {
 		for (int num : result)
 			System.out.println(num);
 	}
+	
+	@Test
+	public void testHello(){
+		System.out.println("hello,world");
+	}
 }
