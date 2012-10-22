@@ -31,6 +31,6 @@ public class GetSetBenchmark {
 
 		jedis.disconnect();
 
-		System.out.println(((1000 * 2 * TOTAL_OPERATIONS) / elapsed) + " ops");
+		System.out.println(((1000 * 2 * TOTAL_OPERATIONS) / elapsed) + " ops per second");
 	}
 }

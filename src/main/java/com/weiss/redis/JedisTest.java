@@ -19,7 +19,10 @@ public class JedisTest extends JedisCommandTestBase {
 
 	@Test
 	public void useWithoutConnecting() {
-		Jedis jedis = new Jedis("localhost");
+		Jedis jedis = new Jedis("192.168.0.10", 6379);
+		System.out.println(jedis.get("server:name"));
+		jedis.connect();
+		System.out.println(jedis.get("server:name"));
 		// jedits.auth("foobared");
 		System.out.println("size:" + jedis.dbSize());
 	}
@@ -46,7 +49,18 @@ public class JedisTest extends JedisCommandTestBase {
 		JedisShardInfo shardInfo = new JedisShardInfo("localhost", Protocol.DEFAULT_PORT);
 		// shardInfo.setPassword("foobared");
 		Jedis jedis = new Jedis(shardInfo);
-		System.out.println(jedis.get("foo"));
+		System.out.println(jedis.hgetAll("foo"));
+	}
+
+	@Test
+	public void testHm() {
+		Map<String, String> hash = new HashMap<String, String>();
+		hash.put("1", "one");
+		hash.put("2", "two");
+		hash.put("3", "three");
+
+		jedis.hmset("number:map", hash);
+		System.out.println(jedis.hmget("number:map", "1", "2"));
 	}
 
 	@Test(expected = JedisConnectionException.class)
@@ -57,7 +71,7 @@ public class JedisTest extends JedisCommandTestBase {
 		// we need to sleep a long time since redis check for idle connections
 		// every 10 seconds or so
 		Thread.sleep(15000);
-		System.out.println(jedis.hmget("foobar", "foo"));
+		System.out.println(jedis.hmget("mumber:map", "1"));
 	}
 
 	@Test(expected = JedisDataException.class)
@@ -67,7 +81,10 @@ public class JedisTest extends JedisCommandTestBase {
 
 	@Test
 	public void shouldReconnectToSameDB() throws IOException {
+		System.out.println("db===" + jedis.getDB());
 		jedis.select(1);
+		System.out.println("after select 1,db===" + jedis.getDB());
+		System.out.println(jedis.get("server:name"));
 		jedis.set("foo", "bar");
 		jedis.getClient().getSocket().shutdownInput();
 		jedis.getClient().getSocket().shutdownOutput();

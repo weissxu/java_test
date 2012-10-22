@@ -7,11 +7,32 @@ import com.taobao.api.Constants;
 import com.taobao.api.DefaultTaobaoClient;
 import com.taobao.api.TaobaoClient;
 import com.taobao.api.request.ItemGetRequest;
+import com.taobao.api.request.ItemUpdateRequest;
 import com.taobao.api.request.TaobaokeItemsConvertRequest;
 import com.taobao.api.response.ItemGetResponse;
 import com.taobao.api.response.TaobaokeItemsConvertResponse;
 
 public class TaobaoTest {
+	/*
+	 * TaobaoClient client=new DefaultTaobaoClient(url, appkey, secret);
+	 * ItemGetRequest req=new ItemGetRequest();
+	 * req.setFields("detail_url,desc"); req.setNumIid(1500010676467L);
+	 * ItemGetResponse response = client.execute(req , sessionKey);
+	 */
+
+	@Test
+	public void testScheduleUpdate() throws ApiException {
+		TaobaoClient client = new DefaultTaobaoClient(
+				"http://gw.api.tbsandbox.com/schedule/2.0/json?schedule=2012-09-10 22:30:20&callbackurl=http://www.taobao.com",
+				"1021034066", "sandboxab2a29640a3e7f73763f37037");
+		ItemUpdateRequest req = new ItemUpdateRequest();
+		req.setNumIid(3838293428L);
+		req.setDesc("schedule update description");
+		// ItemGetRequest req = new ItemGetRequest();
+		// req.setFields("detail_url,desc");
+		// req.setNumIid(1500010676467L);
+		client.execute(req, "6100819a60b3a371ee0cbe98ac61252d7942b97b67a9e9c2074082786");
+	}
 
 	@Test
 	public void testTaobaoke() throws ApiException {

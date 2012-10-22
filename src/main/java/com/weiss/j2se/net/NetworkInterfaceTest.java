@@ -18,7 +18,10 @@ public class NetworkInterfaceTest {
 			Enumeration<InetAddress> addres = face.getInetAddresses();
 			while (addres.hasMoreElements()) {
 				InetAddress addr = addres.nextElement();
-				System.out.println("ip: " + addr.getHostAddress());
+				System.out.println(addr.getHostAddress() + "/" + addr.isSiteLocalAddress() + "/" + !addr.isLoopbackAddress() + "/"
+						+ addr.isLinkLocalAddress());
+				if (addr.isSiteLocalAddress() && !addr.isLoopbackAddress() && addr.getHostAddress().indexOf(":") == -1)
+					System.out.println("ip: ===========" + addr.getHostAddress());
 			}
 		}
 	}

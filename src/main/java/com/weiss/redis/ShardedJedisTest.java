@@ -50,13 +50,27 @@ public class ShardedJedisTest extends Assert {
 	}
 
 	@Test
+	public void tryShar() {
+		List<JedisShardInfo> shards = new ArrayList<JedisShardInfo>();
+		JedisShardInfo si = new JedisShardInfo(redis1.host, redis1.port);
+		// // si.setPassword("foobared");
+		shards.add(si);
+		si = new JedisShardInfo(redis2.host, redis2.port);
+		// // si.setPassword("foobared");
+		shards.add(si);
+		ShardedJedis jedis = new ShardedJedis(shards);
+		assertEquals("bar", jedis.get("a"));
+		assertEquals("bar1", jedis.get("b"));
+	}
+
+	@Test
 	public void trySharding() {
 		List<JedisShardInfo> shards = new ArrayList<JedisShardInfo>();
 		JedisShardInfo si = new JedisShardInfo(redis1.host, redis1.port);
-		si.setPassword("foobared");
+		// // si.setPassword("foobared");
 		shards.add(si);
 		si = new JedisShardInfo(redis2.host, redis2.port);
-		si.setPassword("foobared");
+		// // si.setPassword("foobared");
 		shards.add(si);
 		ShardedJedis jedis = new ShardedJedis(shards);
 		jedis.set("a", "bar");
@@ -66,12 +80,12 @@ public class ShardedJedisTest extends Assert {
 		jedis.disconnect();
 
 		Jedis j = new Jedis(s1.getHost(), s1.getPort());
-		j.auth("foobared");
+		// // j.auth("foobared");
 		assertEquals("bar", j.get("a"));
 		j.disconnect();
 
 		j = new Jedis(s2.getHost(), s2.getPort());
-		j.auth("foobared");
+		// // j.auth("foobared");
 		assertEquals("bar1", j.get("b"));
 		j.disconnect();
 	}
@@ -80,10 +94,10 @@ public class ShardedJedisTest extends Assert {
 	public void tryShardingWithMurmure() {
 		List<JedisShardInfo> shards = new ArrayList<JedisShardInfo>();
 		JedisShardInfo si = new JedisShardInfo(redis1.host, redis1.port);
-		si.setPassword("foobared");
+		// si.setPassword("foobared");
 		shards.add(si);
 		si = new JedisShardInfo(redis2.host, redis2.port);
-		si.setPassword("foobared");
+		// si.setPassword("foobared");
 		shards.add(si);
 		ShardedJedis jedis = new ShardedJedis(shards, Hashing.MURMUR_HASH);
 		jedis.set("a", "bar");
@@ -93,12 +107,12 @@ public class ShardedJedisTest extends Assert {
 		jedis.disconnect();
 
 		Jedis j = new Jedis(s1.getHost(), s1.getPort());
-		j.auth("foobared");
+		// j.auth("foobared");
 		assertEquals("bar", j.get("a"));
 		j.disconnect();
 
 		j = new Jedis(s2.getHost(), s2.getPort());
-		j.auth("foobared");
+		// j.auth("foobared");
 		assertEquals("bar1", j.get("b"));
 		j.disconnect();
 	}
@@ -143,8 +157,8 @@ public class ShardedJedisTest extends Assert {
 		List<JedisShardInfo> shards = new ArrayList<JedisShardInfo>();
 		shards.add(new JedisShardInfo(redis1.host, redis1.port));
 		shards.add(new JedisShardInfo(redis2.host, redis2.port));
-		shards.get(0).setPassword("foobared");
-		shards.get(1).setPassword("foobared");
+		// shards.get(0).setPassword("foobared");
+		// shards.get(1).setPassword("foobared");
 		ShardedJedis jedis = new ShardedJedis(shards);
 
 		final List<String> keys = getKeysDifferentShard(jedis);
@@ -197,6 +211,9 @@ public class ShardedJedisTest extends Assert {
 				break;
 			}
 		}
+		System.out.println("shard_6379=====" + shard_6379);
+		System.out.println("shard_6380=====" + shard_6380);
+		System.out.println("shard_6381=====" + shard_6381);
 		assertTrue(shard_6379 > 300 && shard_6379 < 400);
 		assertTrue(shard_6380 > 300 && shard_6380 < 400);
 		assertTrue(shard_6381 > 300 && shard_6381 < 400);
@@ -229,6 +246,9 @@ public class ShardedJedisTest extends Assert {
 				break;
 			}
 		}
+		System.out.println("shard_6379=====" + shard_6379);
+		System.out.println("shard_6380=====" + shard_6380);
+		System.out.println("shard_6381=====" + shard_6381);
 		assertTrue(shard_6379 > 300 && shard_6379 < 400);
 		assertTrue(shard_6380 > 300 && shard_6380 < 400);
 		assertTrue(shard_6381 > 300 && shard_6381 < 400);

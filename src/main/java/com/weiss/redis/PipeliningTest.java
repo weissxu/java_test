@@ -29,7 +29,7 @@ public class PipeliningTest extends Assert {
 		jedis = new Jedis(hnp.host, hnp.port, 500);
 		jedis.connect();
 		// jedits.auth("foobared");
-		jedis.flushAll();
+		// jedis.flushAll();
 	}
 
 	@Test
@@ -107,7 +107,7 @@ public class PipeliningTest extends Assert {
 		assertNotNull(score.get());
 	}
 
-	@Test
+	@Test(expected = NullPointerException.class)
 	public void pipelineResponseWithoutData() {
 		jedis.zadd("zset", 1, "foo");
 
@@ -124,8 +124,8 @@ public class PipeliningTest extends Assert {
 
 		Pipeline p = jedis.pipelined();
 		Response<String> string = p.get("string");
-		string.get();
 		p.sync();
+		System.out.println(string.get());
 	}
 
 	@Test

@@ -31,8 +31,8 @@ public class JedisPoolTest extends Assert {
 		JedisPool pool = new JedisPool(new JedisPoolConfig(), hnp.host, hnp.port);
 		Jedis jedis = pool.getResource();
 		// jedits.auth("foobared");
-		jedis.set("foo", "bar");
-		assertEquals("bar", jedis.get("foo"));
+		jedis.set("foo", "bar1");
+		assertEquals("bar1", jedis.get("foo"));
 		pool.returnResource(jedis);
 		pool.destroy();
 	}
@@ -86,7 +86,7 @@ public class JedisPoolTest extends Assert {
 	public void securePool() {
 		JedisPoolConfig config = new JedisPoolConfig();
 		config.setTestOnBorrow(true);
-		JedisPool pool = new JedisPool(config, hnp.host, hnp.port, 2000, "foobared");
+		JedisPool pool = new JedisPool(config, hnp.host, hnp.port, 2000, null);
 		Jedis jedis = pool.getResource();
 		jedis.set("foo", "bar");
 		pool.returnResource(jedis);
@@ -95,7 +95,7 @@ public class JedisPoolTest extends Assert {
 
 	@Test
 	public void nonDefaultDatabase() {
-		JedisPool pool0 = new JedisPool(new JedisPoolConfig(), hnp.host, hnp.port, 2000, "foobared");
+		JedisPool pool0 = new JedisPool(new JedisPoolConfig(), hnp.host, hnp.port, 2000, "password");
 		Jedis jedis0 = pool0.getResource();
 		jedis0.set("foo", "bar");
 		assertEquals("bar", jedis0.get("foo"));

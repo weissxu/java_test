@@ -9,10 +9,11 @@ public class RedisTest {
 	@Test
 	public void testMset() {
 		Jedis jedis = new Jedis("localhost");
+		System.out.println("before mset,size====" + jedis.dbSize());
 		jedis.mset("hello", "world", "nihao", "haoma");
 		// jedis.mset("hello", "welcome");
 		// jedis.mset("hello", "hi");
-		System.out.println("size:" + jedis.dbSize());
+		System.out.println("size========" + jedis.dbSize());
 	}
 
 	@Test
@@ -39,7 +40,5 @@ public class RedisTest {
 		jedis.set("foo", "bar");
 		String value = jedis.get("foo");
 		System.out.println(value);
-
 	}
-
 }
