@@ -1,54 +1,59 @@
 package com.weiss.note;
 
+@SuppressWarnings("ALL")
 public class Operate {
-	private Student stu[] = {new Student(1,"ÕÅÈı",0),new Student(2,"ÀîËÄ",0),
-			new Student(3,"ÍõÎå",0),new Student(4,"ÕÔÁù",0)} ;// ºîÑ¡ÈËĞÅÏ¢
-		private boolean flag = true ;
-		public Operate(){
-			this.printInfo() ;	// ÏÈÊä³öºòÑ¡ÈËĞÅÏ¢
-			while(flag){
-				this.vote() ;	// Ñ­»·µ÷ÓÃÍ¶Æ±
-			}
-			this.printInfo() ;	// Êä³öÍ¶Æ±Ö®ºóµÄºîÑ¡ÈËĞÅÏ¢
-			this.getResult() ;	// µÃµ½½á¹û
-		}
-		private void getResult(){	// µÃµ½×îÖÕµÄÍ¶Æ±½á¹û
-			java.util.Arrays.sort(this.stu) ;	// ÅÅĞò
-			System.out.println("Í¶Æ±×îÖÕ½á¹û£º" + this.stu[0].getName()+"Í¬Ñ§£¬×îºóÒÔ"+this.stu[0].getVote()+"Æ±µ±Ñ¡°à³¤£¡") ;
-		}
-		public void vote(){	// ´Ë·½·¨Íê³ÉÍ¶Æ±¹¦ÄÜ
-			InputData input = new InputData() ;	// ÊäÈëÊı¾İ
-			int num = input.getInt("ÇëÊäÈë°à³¤ºîÑ¡ÈË´úºÅ£¨Êı×Ö0½áÊø£©£º","´ËÑ¡Æ±ÎŞĞ§£¬ÇëÊäÈëÕıÈ·µÄºîÑ¡ÈË´úºÅ£¡") ;
-			switch(num){
-				case 0:{
-					this.flag = false ;	// ÖĞ¶ÏÑ­»·
-					break ;
-				}
-				case 1:{
-					this.stu[0].setVote(this.stu[0].getVote() + 1) ;
-					break ;
-				}
-				case 2:{
-					this.stu[1].setVote(this.stu[1].getVote() + 1) ;
-					break ;
-				}
-				case 3:{
-					this.stu[2].setVote(this.stu[2].getVote() + 1) ;
-					break ;
-				}
-				case 4:{
-					this.stu[3].setVote(this.stu[3].getVote() + 1) ;
-					break ;
-				}
-				default:{
-					System.out.println("´ËÑ¡Æ±ÎŞĞ§£¬ÇëÊäÈëÕıÈ·µÄºòÑ¡ÈË´úºÅ£¡") ;
-				}
-			}
-		}
-		public void printInfo(){	
-			for(int i=0;i<stu.length;i++){
-				System.out.println(this.stu[i].getStuNo() + "£º"
-					+ this.stu[i].getName() + "¡¾"+this.stu[i].getVote()+"¡¿") ;	
-			}
-		}
+    private Student stu[] = {new Student(1, "ï¿½ï¿½ï¿½ï¿½", 0), new Student(2, "ï¿½ï¿½ï¿½ï¿½", 0),
+            new Student(3, "ï¿½ï¿½ï¿½ï¿½", 0), new Student(4, "ï¿½ï¿½ï¿½ï¿½", 0)};// ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½ï¿½Ï¢
+    private boolean flag = true;
+
+    public Operate() {
+        this.printInfo();    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½ï¿½Ï¢
+        while (flag) {
+            this.vote();    // Ñ­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¶Æ±
+        }
+        this.printInfo();    // ï¿½ï¿½ï¿½Í¶Æ±Ö®ï¿½ï¿½Äºï¿½Ñ¡ï¿½ï¿½ï¿½ï¿½Ï¢
+        this.getResult();    // ï¿½Ãµï¿½ï¿½ï¿½ï¿½
+    }
+
+    private void getResult() {    // ï¿½Ãµï¿½ï¿½ï¿½ï¿½Õµï¿½Í¶Æ±ï¿½ï¿½ï¿½
+        java.util.Arrays.sort(this.stu);    // ï¿½ï¿½ï¿½ï¿½
+        System.out.println("Í¶Æ±ï¿½ï¿½ï¿½Õ½ï¿½ï¿½ï¿½ï¿½" + this.stu[0].getName() + "Í¬Ñ§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½" + this.stu[0].getVote() + "Æ±ï¿½ï¿½Ñ¡ï¿½à³¤ï¿½ï¿½");
+    }
+
+    public void vote() {    // ï¿½Ë·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¶Æ±ï¿½ï¿½ï¿½ï¿½
+        InputData input = new InputData();    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+        int num = input.getInt("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½à³¤ï¿½ï¿½Ñ¡ï¿½Ë´ï¿½ï¿½Å£ï¿½ï¿½ï¿½ï¿½ï¿½0ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", "ï¿½ï¿½Ñ¡Æ±ï¿½ï¿½Ğ§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È·ï¿½Äºï¿½Ñ¡ï¿½Ë´ï¿½ï¿½Å£ï¿½");
+        switch (num) {
+            case 0: {
+                this.flag = false;    // ï¿½Ğ¶ï¿½Ñ­ï¿½ï¿½
+                break;
+            }
+            case 1: {
+                this.stu[0].setVote(this.stu[0].getVote() + 1);
+                break;
+            }
+            case 2: {
+                this.stu[1].setVote(this.stu[1].getVote() + 1);
+                break;
+            }
+            case 3: {
+                this.stu[2].setVote(this.stu[2].getVote() + 1);
+                break;
+            }
+            case 4: {
+                this.stu[3].setVote(this.stu[3].getVote() + 1);
+                break;
+            }
+            default: {
+                System.out.println("ï¿½ï¿½Ñ¡Æ±ï¿½ï¿½Ğ§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È·ï¿½Äºï¿½Ñ¡ï¿½Ë´ï¿½ï¿½Å£ï¿½");
+            }
+        }
+    }
+
+    public void printInfo() {
+        for (int i = 0; i < stu.length; i++) {
+            System.out.println(this.stu[i].getStuNo() + "ï¿½ï¿½"
+                    + this.stu[i].getName() + "ï¿½ï¿½" + this.stu[i].getVote() + "ï¿½ï¿½");
+        }
+    }
 }

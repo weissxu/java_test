@@ -4,34 +4,38 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+@SuppressWarnings("ALL")
 public class InputData {
-	private BufferedReader buf = null ;		// ½ÓÊÕÊý¾Ý
-	public InputData(){
-		this.buf = new BufferedReader(new InputStreamReader(System.in)) ;
-	}
-	public String getString(String info){	// µÃµ½×Ö·û´®
-		String temp =  null ;	// ½ÓÊÕÊäÈëÄÚÈÝ
-		System.out.print(info) ;
-		try{
-			temp = this.buf.readLine() ;	// ½ÓÊÕÊý¾Ý
-		}catch(IOException e){
-			e.printStackTrace() ;
-		}
-		return temp ;
-	}
-	public int getInt(String info,String err){	// µÃµ½ÕûÐÍÊý¾Ý
-		int temp = 0 ;
-		String str = null ;
-		boolean flag = true ;	// ¶¨ÒåÒ»¸öÑ­»·±ê¼Ç
-		while(flag){
-			str = this.getString(info) ;
-			if(str.matches("\\d+")){
-				temp = Integer.parseInt(str) ;
-				flag = false ;	// ¸ü¸Ä±êÖ¾Î»£¬½«ÍË³öÑ­»·
-			}else{
-				System.out.println(err) ;
-			}
-		}
-		return temp ;
-	}
+    private BufferedReader buf = null;        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+
+    public InputData() {
+        this.buf = new BufferedReader(new InputStreamReader(System.in));
+    }
+
+    public String getString(String info) {    // ï¿½Ãµï¿½ï¿½Ö·ï¿½ï¿½ï¿½
+        String temp = null;    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+        System.out.print(info);
+        try {
+            temp = this.buf.readLine();    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return temp;
+    }
+
+    public int getInt(String info, String err) {    // ï¿½Ãµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+        int temp = 0;
+        String str = null;
+        boolean flag = true;    // ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Ñ­ï¿½ï¿½ï¿½ï¿½ï¿½
+        while (flag) {
+            str = this.getString(info);
+            if (str.matches("\\d+")) {
+                temp = Integer.parseInt(str);
+                flag = false;    // ï¿½ï¿½ï¿½Ä±ï¿½Ö¾Î»ï¿½ï¿½ï¿½ï¿½ï¿½Ë³ï¿½Ñ­ï¿½ï¿½
+            } else {
+                System.out.println(err);
+            }
+        }
+        return temp;
+    }
 }

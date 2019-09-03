@@ -1,9 +1,9 @@
 package com.weiss.note;
 
 	public class Student implements Comparable<Student>{
-		private int stuNo ;	// 学生编号
-		private String name ;	// 学生姓名
-		private int vote ;	// 学生票数
+		private int stuNo ;	// 瀛︾敓缂栧彿
+		private String name ;	// 瀛︾敓濮撳悕
+		private int vote ;	// 瀛︾敓绁ㄦ暟
 		public Student(int stuNo,String name,int vote){
 			this.setStuNo(stuNo) ;
 			this.setName(name) ;
