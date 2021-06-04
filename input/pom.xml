@@ -16,7 +16,7 @@
 		<junit.version>4.8.2</junit.version>
 		<tomcat.version>7.0.21</tomcat.version>
 		<ftpserver.version>1.0.6</ftpserver.version>
-		<httpcomponents.version>4.1.2</httpcomponents.version>
+		<httpcomponents.version>4.5.13</httpcomponents.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<quartz.version>UTF-8</quartz.version>
 	</properties>
